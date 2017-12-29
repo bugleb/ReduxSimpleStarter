@@ -4,7 +4,7 @@ import SearchBar from './search_bar';
 import VideoList from './video_list';
 import VideoPlayer from './video_player';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div>
@@ -15,3 +15,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;
