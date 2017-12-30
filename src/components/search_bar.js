@@ -5,21 +5,18 @@ class SearchBar extends Component {
         super(props);
 
         this.state = {
-            inputValue: '',
+            searchTerm: '',
         };
     }
     
     handleChange(e) {
         this.setState({
-            inputValue: e.target.value,
+            searchTerm: e.target.value,
         });
     }
 
     handleSubmit(e) {
-        console.log(this.state.inputValue);
-        this.setState({
-            inputValue: '',
-        });
+        this.props.searchForTerm(this.state.searchTerm);
         e.preventDefault();
     }
 
@@ -30,7 +27,7 @@ class SearchBar extends Component {
                     <input
                         onChange={this.handleChange.bind(this)}
                         type='text'
-                        value={this.state.inputValue}
+                        value={this.state.searchTerm}
                     />
                     <input type='submit' value='Search' />
                 </form>
