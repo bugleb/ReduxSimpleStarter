@@ -38,16 +38,26 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <SearchBar
-                    searchForTerm={this.searchForTerm}
-                />
-                <VideoPlayer
-                    selectedVideo={this.state.selectedVideo}
-                />
-                <VideoList
-                    searchResults={this.state.searchResults}
-                />
+            <div className="row">
+                <div className="row">
+                    <div className="cold-col-md-12">
+                        <SearchBar
+                            searchForTerm={this.searchForTerm}
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-8">
+                        <VideoPlayer
+                            selectedVideo={this.state.selectedVideo}
+                        />
+                    </div>
+                    <div className="cold-md-4">
+                        <VideoList
+                            searchResults={this.state.searchResults}
+                        />
+                    </div>
+                </div>
             </div>
         );
     }
