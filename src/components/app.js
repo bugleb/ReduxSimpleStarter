@@ -8,6 +8,13 @@ import VideoPlayer from './video_player';
 class App extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            searchResults: [],
+            selectedVideo: {},
+        };
+
+        this.searchForTerm = this.searchForTerm.bind(this);
     }
 
     searchForTerm(term) {
@@ -21,7 +28,10 @@ class App extends Component {
                 return console.error(err);
             }
 
-            console.log('results', results);
+            this.setState({
+                searchResults: results,
+                selectedVideo: results[0],
+            });
         });
     }
 
@@ -31,8 +41,12 @@ class App extends Component {
                 <SearchBar
                     searchForTerm={this.searchForTerm}
                 />
-                <VideoPlayer />
-                <VideoList />
+                <VideoPlayer
+                    selectedVideo={this.state.selectedVideo}
+                />
+                <VideoList
+                    searchResults={this.state.searchResults}
+                />
             </div>
         );
     }

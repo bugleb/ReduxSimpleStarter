@@ -8,7 +8,7 @@ class SearchBar extends Component {
             searchTerm: '',
         };
     }
-    
+
     handleChange(e) {
         this.setState({
             searchTerm: e.target.value,
