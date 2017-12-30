@@ -8,11 +8,16 @@ class VideoList extends Component {
     }
 
     render() {
-        console.log('results', this.props.searchResults);
+        const videoList = this.props.searchResults.map((video) =>
+            <VideoListItem
+                key={video.id}
+                video={video}
+            />
+        );
+
         return (
             <div>
-                video list
-                <VideoListItem />
+                {videoList}
             </div>
         );
     }

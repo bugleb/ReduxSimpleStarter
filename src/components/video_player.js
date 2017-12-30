@@ -6,8 +6,6 @@ class VideoPlayer extends Component {
     }
 
     render() {
-        console.log('selectedVideo', this.props.selectedVideo);
-
         return (
             <div>
                 <iframe
@@ -17,6 +15,9 @@ class VideoPlayer extends Component {
                     frameBorder='0'
                 >
                 </iframe>
+                <div>
+                    {this.props.selectedVideo.description}
+                </div>
             </div>
         );
     }
