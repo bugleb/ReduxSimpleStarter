@@ -15,6 +15,7 @@ class App extends Component {
         };
 
         this.searchForTerm = this.searchForTerm.bind(this);
+        this.searchForTerm('tesla');
     }
 
     searchForTerm(term) {
