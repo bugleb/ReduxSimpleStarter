@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.24.1",
-    "bootstrap": "^3.3.7",
     "fs": "0.0.1-security",
     "lodash": "^4.17.4",
     "net": "^1.0.2",
