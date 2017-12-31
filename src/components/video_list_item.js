@@ -7,9 +7,9 @@ class VideoListItem extends Component {
 
     render() {
         return (
-            <div>
+            <li className="list-group-item video-list-item">
                 {this.props.video.title}
-            </div>
+            </li>
         );
     }
 }

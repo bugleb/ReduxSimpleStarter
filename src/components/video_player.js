@@ -7,16 +7,24 @@ class VideoPlayer extends Component {
 
     render() {
         return (
-            <div>
-                <iframe
-                    width='700'
-                    height='394'
-                    src={`https://www.youtube.com/embed/${this.props.selectedVideo.id}`}
-                    frameBorder='0'
-                >
-                </iframe>
-                <div>
-                    {this.props.selectedVideo.description}
+            <div className="card">
+                <div className="card-img-top video-iframe">
+                    <iframe
+                        style={{position: "absolute"}}
+                        width='100%'
+                        height='100%'
+                        src={`https://www.youtube.com/embed/${this.props.selectedVideo.id}`}
+                        frameBorder='0'
+                    >
+                    </iframe>
+                </div>
+                <div className="card-body">
+                    <h5 className="card-title">
+                        Description
+                    </h5>
+                    <div className="card-text">
+                        {this.props.selectedVideo.description}
+                    </div>
                 </div>
             </div>
         );

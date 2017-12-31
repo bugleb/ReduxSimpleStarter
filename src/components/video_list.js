@@ -17,7 +17,9 @@ class VideoList extends Component {
 
         return (
             <div>
-                {videoList}
+                <ul className="list-group">
+                    {videoList}
+                </ul>
             </div>
         );
     }

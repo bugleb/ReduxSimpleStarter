@@ -23,13 +23,21 @@ class SearchBar extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                    <input
-                        onChange={this.handleChange.bind(this)}
-                        type='text'
-                        value={this.state.searchTerm}
-                    />
-                    <input type='submit' value='Search' />
+                <form className="form-inline" onSubmit={this.handleSubmit.bind(this)}>
+                    <div className="search-bar-contents">
+                        <input
+                            type="text"
+                            className="form-control search-bar-input"
+                            value={this.state.searchTerm}
+                            onChange={this.handleChange.bind(this)}
+                        />
+                        <button
+                            type="submit"
+                            className="btn btn-primary mtb-3"
+                        >
+                            Search
+                        </button>
+                    </div>
                 </form>
             </div>
         );

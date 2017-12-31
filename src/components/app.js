@@ -38,9 +38,9 @@ class App extends Component {
 
     render() {
         return (
-            <div className="row">
+            <div>
                 <div className="row">
-                    <div className="cold-col-md-12">
+                    <div className="search-bar-container col-md-8">
                         <SearchBar
                             searchForTerm={this.searchForTerm}
                         />
@@ -52,7 +52,7 @@ class App extends Component {
                             selectedVideo={this.state.selectedVideo}
                         />
                     </div>
-                    <div className="cold-md-4">
+                    <div className="col-md-4">
                         <VideoList
                             searchResults={this.state.searchResults}
                         />
