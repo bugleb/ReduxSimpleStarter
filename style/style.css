@@ -21,3 +21,10 @@ body {
 .video-list-item:hover {
     background-color: rgba(3, 122, 255, 0.1);
 }
+
+.video-thumbnail-title {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

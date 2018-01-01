@@ -12,6 +12,7 @@ class VideoList extends Component {
             <VideoListItem
                 key={video.id}
                 video={video}
+                onVideoSelect={this.props.onVideoSelect}
             />
         );
 

@@ -18,6 +18,12 @@ class App extends Component {
         this.searchForTerm('tesla');
     }
 
+    onVideoSelect(video) {
+        this.setState({
+            selectedVideo: video,
+        });
+    }
+
     searchForTerm(term) {
         const options = {
             key: 'AIzaSyAdJY5pB4VD71kvSsQOTnQkaJ2ufPonrp4',
@@ -54,6 +60,7 @@ class App extends Component {
                     </div>
                     <div className="col-md-4">
                         <VideoList
+                            onVideoSelect={this.onVideoSelect.bind(this)}
                             searchResults={this.state.searchResults}
                         />
                     </div>
